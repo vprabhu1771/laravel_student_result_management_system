@@ -34,4 +34,12 @@ class Group extends Model
     {
         return $this->hasMany(GroupSection::class);
     }
+
+    /**
+     * The students that belong to the group through group sections.
+     */
+    public function students()
+    {
+        return $this->hasManyThrough(Student::class, GroupSection::class, 'group_id', 'id', 'id', 'student_id');
+    }
 }
