@@ -14,4 +14,10 @@ class StudentGroupSection extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+     // Define the relationship with the GroupSection model
+     public function groupSection()
+     {
+         return $this->belongsTo(GroupSection::class);
+     }
 }
