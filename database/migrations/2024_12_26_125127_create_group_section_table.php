@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('group_section', function (Blueprint $table) {
+        Schema::create('group_sections', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('group_id');
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('group_section');
+        Schema::dropIfExists('group_sections');
     }
 };
