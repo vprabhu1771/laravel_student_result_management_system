@@ -18,4 +18,12 @@ class Group extends Model
         'name',
         'numberic'
     ];
+
+    /**
+     * The sections that belong to the group.
+     */
+    public function sections()
+    {
+        return $this->belongsToMany(Section::class, 'group_section', 'group_id', 'section_id');
+    }
 }
