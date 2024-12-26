@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin')
         ]);
 
-        $this->call(GroupSeeder::class);
+        $this->call([
+            GroupSeeder::class,
+            SectionSeeder::class
+        ]);
     }
 }
