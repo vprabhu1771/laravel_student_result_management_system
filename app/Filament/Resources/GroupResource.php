@@ -66,6 +66,7 @@ class GroupResource extends Resource
     {
         return [
             //
+            RelationManagers\SectionsRelationManager::class
         ];
     }
 
