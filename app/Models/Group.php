@@ -24,7 +24,7 @@ class Group extends Model
      */
     public function sections()
     {
-        return $this->belongsToMany(Section::class, 'group_section', 'group_id', 'section_id');
+        return $this->belongsToMany(Section::class, 'group_sections', 'group_id', 'section_id');
     }
 
     /**
