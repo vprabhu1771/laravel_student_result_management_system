@@ -14,6 +14,8 @@ class SectionsRelationManager extends RelationManager
 {
     protected static string $relationship = 'sections';
 
+    protected static ?string $title = 'Sections';
+
     public function form(Form $form): Form
     {
         return $form
@@ -35,9 +37,13 @@ class SectionsRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
+                Tables\Actions\AttachAction::make(), // Allow attaching existing sections
+
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([
+                Tables\Actions\DetachAction::make(), // Allow detaching sections
+
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
