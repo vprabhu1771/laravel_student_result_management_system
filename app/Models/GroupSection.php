@@ -9,6 +9,8 @@ class GroupSection extends Model
 {
     use HasFactory;
 
+    protected $table = 'group_section';
+
     protected $fillable = ['group_id', 'section_id'];
 
     /**
